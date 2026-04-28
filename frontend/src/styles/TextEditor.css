@@ -1,0 +1,84 @@
+/* TextEditor.css - WordPress Classic Style */
+
+/* Main Container */
+.quill {
+    background: white;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Toolbar Style */
+.ql-toolbar.ql-snow {
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 12px;
+}
+
+/* Container Style */
+.ql-container.ql-snow {
+    border: 1px solid #e2e8f0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: white;
+    min-height: 400px;
+    /* Tall editor like WP */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    /* Classic WP feel for content */
+    font-size: 16px;
+    color: #2c3338;
+}
+
+/* Content Area */
+.ql-editor {
+    min-height: 400px;
+    padding: 24px;
+    line-height: 1.8;
+}
+
+/* Placeholder */
+.ql-editor.ql-blank::before {
+    font-style: italic;
+    color: #a0aec0;
+}
+
+/* Toolbar Button Overrides for nicer look */
+.ql-snow .ql-picker-label {
+    color: #4a5568;
+}
+
+.ql-snow .ql-stroke {
+    stroke: #4a5568;
+}
+
+.ql-snow .ql-fill {
+    fill: #4a5568;
+}
+
+/* Active State */
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.ql-snow .ql-picker-label:hover .ql-stroke,
+.ql-snow .ql-picker-label.ql-active .ql-stroke,
+.ql-snow .ql-picker-item:hover .ql-stroke,
+.ql-snow .ql-picker-item.ql-active .ql-stroke {
+    stroke: #da291c;
+    /* Brand Red */
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill,
+.ql-snow .ql-picker-label:hover .ql-fill,
+.ql-snow .ql-picker-label.ql-active .ql-fill,
+.ql-snow .ql-picker-item:hover .ql-fill,
+.ql-snow .ql-picker-item.ql-active .ql-fill {
+    fill: #da291c;
+    /* Brand Red */
+}
+
+/* Focused State */
+.ql-container.ql-snow.ql-focused {
+    border-color: #cbd5e0;
+    box-shadow: none;
+    /* WP doesn't glow much */
+}
